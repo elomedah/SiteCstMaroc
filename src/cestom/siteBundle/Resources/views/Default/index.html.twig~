@@ -1,0 +1,18 @@
+
+{% extends 'cestomsiteBundle::layout.html.twig' %}
+
+
+
+{% block navigation %}
+
+{% endblock %}
+
+
+{% block soustitre %}
+
+{% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
