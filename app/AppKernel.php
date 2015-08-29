@@ -18,6 +18,9 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new cestom\siteBundle\cestomsiteBundle(),
+            new Cestom\AdminBundle\CestomAdminBundle(),
+            new Cestom\UserBundle\CestomUserBundle(),
+            new Cestom\StoreBundle\CestomStoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

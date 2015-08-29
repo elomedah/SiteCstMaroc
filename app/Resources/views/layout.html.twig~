@@ -1,26 +1,22 @@
+{# app/Resources/views/base.html.twig #}
+<!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}Filmothèque{% endblock %}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Test Application{% endblock %}</title>
     </head>
     <body>
-        <div id="page">
-            <div id="header">
-		<ul id="menu">
-		    <li><a href="{{ path('myapp_accueil') }}">Accueil</a></li>
-		    <li><a href="{{ path('myapp_film_lister') }}">Films</a></li>
-		    <li><a href="{{ path('myapp_acteur_lister') }}">Acteurs</a></li>                    
-		</ul>
-            </div>
+        <div id="sidebar">
+            {% block sidebar %}
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            {% endblock %}
+        </div>
 
-            <div id="content">
-                <h1>{{ block('title') }}</h1>
-                {% block content %}
-                {% endblock %}
-            </div>
-            <div id="footer">
-                <p>Tous droits réservés © 2011</p>
-            </div>
+        <div id="content">
+            {% block body %}{% endblock %}
         </div>
     </body>
 </html>
